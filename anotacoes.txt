@@ -1,0 +1,30 @@
+python3 -m http.server
+-m quer dizer que voce esta a usar um modulo
+
+para alterar o nome do ficheiro existente
+
+$ mv string.py new_string.py
+
+para iniciar um servidor web basta usar o 
+	$ python3 -m http.server 8080 	<-- no local da pasta que deseja deixar acessivel
+
+para baixar algo por linha de comando, basta usar o 
+	$ wget http://127.0.0.1:8080/looping.py	<-- e irar baixar o arquivo
+
+para criar um socket para conectar com uma porta 
+
+# --------------------------------------------#
+#!/bin/python3
+
+import socket
+
+HOST = '127.0.0.1'
+PORTA = 9292
+#socket.socket = chamando a funcao socket dentro da importacao
+#socket.AF_INET = dizendo que vai usar o ipv4
+#socket.SOCK_STREAM = dizendoq ue ta usando o modo TCP
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+s.connect((HOST,PORTA))
+
+#--------------------------------------------------#
